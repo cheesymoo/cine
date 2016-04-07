@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="script.js">
+        </script>
+        <style type="text/css">
+            #buttons {
+                width: 50%;
+                text-align: center;
+            }
+            #slider {
+                width: 100%;
+            }
+            #screen {
+                width: 100%;
+            }
+            #faders {
+                padding: 20px;
+            }
+            .vol {
+                margin-top: 50px;
+                transform: rotate(270deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="screen">
+            <video id='video'
+               preload="auto"
+               mediagroup='myVideoGroup'>
+              <source id='ogv'
+                src="helicop.ogv"
+                type='video/ogg'>
+            </video>
+        </div>
+        <div id="audios">
+            <audio id="audio0" >
+            <audio id="audio1" src="robots.mp3"></audio>
+            <audio id="audio2" src="egg.mp3"></audio>
+        </div>
+        <div id='buttons'>
+            <input type="range" id="slider" min="0" value="0" step="any" oninput="seek()"></input>
+            <button id="play" onclick="togglePlay()">Play!</button>
+            <button onclick="switchVideo(0);">Helicop</button>
+            <button onclick="switchVideo(1);">Test</button>
+        </div>
+        <div id="faders">
+            <input type="range" class="vol" min="0" max="1" step="any" id="fader0" oninput="vol(0)">Film Audio</input>
+            <input type="range" class="vol" min="0" max="1" step="any" id="fader1" oninput="vol(1)">Soundtrack 1</input>
+            <input type="range" class="vol" min="0" max="1" step="any" id="fader2" oninput="vol(2)">Soundtrack 2</input>
+        </div>
+    </body>
+</html>
