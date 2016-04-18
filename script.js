@@ -29,7 +29,7 @@ function init () {
 function switchVideo(n) {
    switch (n) {
         case 0:
-            document._video.setAttribute("src", "helicop.ogv");
+            document._video.setAttribute("src", "example.mp4");
             break;
         case 1:
             document._video.setAttribute("src", "http://media.w3.org/2010/05/video/movie_300.webm");
