@@ -72,5 +72,8 @@ function seek() {
 }
 
 function vol(val) {
+    if (val == 0) {	
+	document._video.volume = document._fader[val].value;
+    }
     document._audio[val].volume = document._fader[val].value;
 }
