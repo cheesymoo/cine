@@ -27,14 +27,18 @@ function init () {
 }
 
 function switchVideo(n) {
-   switch (n) {
+    switch (n) {
         case 0:
-            document._video.setAttribute("src", "example.mp4");
+            document.getElementById("webm").setAttribute('src', 'Example.webm');
+            document._video.load();
             break;
         case 1:
-            document._video.setAttribute("src", "http://media.w3.org/2010/05/video/movie_300.webm");
+            document.getElementById("webm").setAttribute('src', 'dawg.ogv');
+            document._video.load();
             break;
-   }
+    }
+    pauseAll();
+    reset();
 }
 
 var playing = false;
@@ -60,6 +64,14 @@ function pauseAll() {
     document._video.pause();
     document._audio[1].pause();
     document._audio[2].pause();
+}
+
+function reset() {
+    pauseAll();
+    val = 0;
+    document._video.currentTime = val;
+    document._audio[1].currentTime = val
+    document._audio[2].currentTime = val;
 }
 
 function seek() {
