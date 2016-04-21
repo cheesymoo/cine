@@ -44,26 +44,26 @@ function switchVideo(n) {
 var playing = false;
 function togglePlay() {
     if (playing) {
-        document._play.innerHTML = "Play";
         pauseAll();
-        playing = false;
     } else {
-        document._play.innerHTML = "Pause"
         playAll();
-        playing = true;
     }
 }
 
 function playAll() {
+    document._play.innerHTML = "Pause"
     document._video.play();
     document._audio[1].play();
     document._audio[2].play();
+    playing = true;
 }
 
 function pauseAll() {
+    document._play.innerHTML = "Play";
     document._video.pause();
     document._audio[1].pause();
     document._audio[2].pause();
+    playing = false;
 }
 
 function reset() {
