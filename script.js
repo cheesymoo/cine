@@ -24,6 +24,7 @@ function init () {
     document._video.ontimeupdate = function(a, b) {
         document._slider.value = document._video.currentTime;
     }
+    document._video.onclick = togglePlay;
 }
 
 function switchVideo(n) {
