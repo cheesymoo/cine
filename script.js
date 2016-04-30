@@ -77,11 +77,9 @@ function reset() {
 
 function seek() {
     var val = document._slider.value;
-    //document._video.seekable.start(0);  // Returns the starting time (in seconds)
     document._video.currentTime = val;
     document._audio[1].currentTime = val
     document._audio[2].currentTime = val;
-    //document._video.played.end(0);  // Returns the number of seconds the browser has played
 }
 
 function vol(val) {
