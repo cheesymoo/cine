@@ -12,7 +12,7 @@
             #slider {
                 width: 100%;
             }
-            #screen {
+            #video {
                 width: 100%;
             }
             #faders {
@@ -33,6 +33,7 @@
                 src="Example.webm"
                 type='video/webm'>
             </video>
+            <input type="range" id="slider" min="0" value="0" step="any" oninput="seek()"></input>
         </div>
         <div id="audios">
             <audio id="audio0" >
@@ -40,7 +41,6 @@
             <audio id="audio2" src="track2.mp3"></audio>
         </div>
         <div id='buttons'>
-            <input type="range" id="slider" min="0" value="0" step="any" oninput="seek()"></input>
             <button id="play" onclick="togglePlay()">Play!</button>
             <button onclick="switchVideo(0);">Video 1</button>
             <button onclick="switchVideo(1);">Video 2</button>
